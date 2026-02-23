@@ -4,10 +4,10 @@ PsikoTarama, bireylerin psikolojik semptom yoğunluklarını 6 farklı klinik al
 
 Klinik psikoloji prensipleri ve modern UX/UI standartları gözetilerek "Dark Theme" (Karanlık Tema) eşliğinde tasarlanmıştır.
 
-## ⚠️ Yasal Uyarı ve Etik Beyan
+##  Yasal Uyarı ve Etik Beyan
 **Bu uygulama tıbbi veya psikiyatrik bir tanı koymaz.** Çıkan sonuçlar "tanı" değil, yalnızca klinik alt boyutlardaki belirti yoğunluğu profilidir. Kesin tanı ve tedavi için bir psikiyatrist veya klinik psikolog muayenesi şarttır. Geliştirici, uygulamanın kullanımından doğabilecek sonuçlardan sorumlu tutulamaz.
 
-## 🚀 Özellikler
+##  Özellikler
 
 * **Çok Boyutlu Analiz:** 30 soru ile 6 temel klinik boyutu ölçer:
   * Depresif Belirtiler (DEP)
@@ -20,7 +20,7 @@ Klinik psikoloji prensipleri ve modern UX/UI standartları gözetilerek "Dark Th
 * **Modern UX/UI:** Pürüzsüz animasyonlar, göz yormayan karanlık tema ve ilerleme çubuğu (progress bar) içerir.
 * **Mobil Uyumlu:** Tüm cihazlarda (Responsive) kusursuz çalışır.
 
-## 🛠️ Teknoloji Yığını (Tech Stack)
+##  Teknoloji Yığını (Tech Stack)
 
 * **HTML5:** Semantik ve erişilebilir (a11y) yapı.
 * **CSS3:** Modern CSS değişkenleri (Custom Properties), Flexbox ve CSS Transition ile "Vanilla" tasarım.
@@ -32,4 +32,4 @@ Proje herhangi bir sunucu veya derleyici (build tool) gerektirmez. Doğrudan tar
 
 1. Depoyu bilgisayarınıza klonlayın:
    ```bash
-   git clone [https://github.com/kullanici-adiniz/psikotarama.git](https://github.com/kullanici-adiniz/psikotarama.git)
+   git clone [https://github.com/KaanTuran28/psikotarama.git](https://github.com/KaanTuran28/psikotarama.git)
