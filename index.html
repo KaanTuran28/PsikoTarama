@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsikoTarama | Ön Psikolojik Değerlendirme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <div id="view-landing" class="view active">
+            <h1>PsikoTarama</h1>
+            <p class="subtitle">Çok Boyutlu Psikolojik Ön Değerlendirme Aracı</p>
+            
+            <div class="disclaimer-box">
+                <strong>Yasal Uyarı:</strong> Bu sistem tıbbi veya psikiyatrik bir tanı koymaz. Çıkan oranlar "tanı" değil, yalnızca klinik alt boyutlardaki <strong>belirti yoğunluğunuzu</strong> gösterir. Kesin tanı için bir psikiyatrist veya klinik psikolog muayenesi şarttır.
+            </div>
+
+            <p>Bu envanter; depresif belirtiler, anksiyete, obsesif-kompulsif eğilimler, somatizasyon, tükenmişlik ve sosyal izolasyon boyutlarını taramak için tasarlanmıştır. 30 sorudan oluşur ve yaklaşık 5 dakika sürer.</p>
+
+            <button class="btn" onclick="navigateTo('view-consent')">Değerlendirmeye Başla</button>
+            
+            <div class="emergency-note">
+                Acil durumlarda veya kriz anlarında lütfen vakit kaybetmeden 112'yi arayınız.
+            </div>
+        </div>
+
+        <div id="view-consent" class="view">
+            <h2>Bilgilendirilmiş Onam</h2>
+            <p>Testte vereceğiniz yanıtlar hiçbir veritabanına kaydedilmez, cihazınızda geçici olarak işlenir ve sayfayı kapattığınızda tamamen silinir.</p>
+            
+            <p>Bu testin sonuçları profesyonel bir değerlendirmenin yerine geçemez. Elde edilecek oranlar yalnızca kişisel farkındalığınızı artırmak içindir.</p>
+
+            <div class="consent-group">
+                <input type="checkbox" id="kvkk-consent">
+                <label for="kvkk-consent">Aydınlatma metnini okudum. Bu testin tanı koymadığını, çıkan sonuçların yalnızca belirti yoğunluğu profili olduğunu anlıyor ve onaylıyorum.</label>
+            </div>
+
+            <div class="btn-row">
+                <button class="btn" id="btn-start-test" onclick="startTest()" disabled>Kabul Ediyorum ve İlerle</button>
+                <button class="btn btn-outline" onclick="navigateTo('view-landing')">Geri Dön</button>
+            </div>
+        </div>
+
+        <div id="view-test" class="view">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            
+            <div class="question-header">
+                <span id="question-counter">Soru 1 / 30</span>
+                <span>PsikoTarama</span>
+            </div>
+
+            <div class="question-text" id="question-text"></div>
+
+            <div class="options" id="options-container"></div>
+
+            <div class="btn-row">
+                <button class="btn btn-outline" id="btn-prev" onclick="prevQuestion()" style="display: none;">Geri</button>
+            </div>
+        </div>
+
+        <div id="view-result" class="view">
+            <div class="result-header">
+                <h2>Klinik Ön Değerlendirme Profili</h2>
+                <div class="risk-label" id="result-risk">Hesaplanıyor...</div>
+            </div>
+
+            <div class="visual-indicator">
+                <div class="indicator-fill" id="indicator-fill"></div>
+            </div>
+
+            <div class="result-card">
+                <h3 style="color: var(--primary-color); font-size: 18px; margin-bottom: 16px;">Genel Değerlendirme Özeti</h3>
+                <p id="result-explanation">...</p>
+                <p class="result-suggestion" id="result-suggestion">...</p>
+            </div>
+
+            <div class="result-card" style="margin-top: 24px;">
+                <h3 style="color: var(--primary-color); font-size: 18px; margin-bottom: 20px;">Klinik Alt Boyut Analizi</h3>
+                <div id="sub-scores-container">
+                    </div>
+            </div>
+
+            <div class="btn-row">
+                <button class="btn" onclick="contactExpert()">Uzman ile İletişime Geç</button>
+                <button class="btn btn-outline" onclick="resetTest()">Testi Tekrar Yap</button>
+            </div>
+            
+            <div class="emergency-note">
+                Acil durumlarda 112'yi arayınız.
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

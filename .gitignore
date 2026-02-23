@@ -1,0 +1,14 @@
+# İşletim Sistemi Dosyaları
+.DS_Store
+Thumbs.db
+
+# Editör ve IDE Dosyaları
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# İleride NPM kullanma ihtimaline karşı
+node_modules/
