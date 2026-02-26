@@ -243,5 +243,6 @@ function resetTest() {
 }
 
 function contactExpert() {
-    alert("Klinik destek yönlendirme sistemine bağlanıyor...");
+    const linkedInUrl = "https://www.linkedin.com/in/melda-girgin/"; 
+    window.open(linkedInUrl, "_blank");
 }
